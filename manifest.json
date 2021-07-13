@@ -1,0 +1,17 @@
+{
+	"manifest_version": 3,
+	"name": "NTCU Elearning Auto Download Blocker",
+	"version": "0.0.1",
+	"description": "A simple extension to prevent auto download when you click 'Enter Course'",
+	"content_scripts": [
+		{
+			"matches": ["https://elearning.ntcu.edu.tw/learn/path/pathtree.php"],
+			"all_frames": true,
+			"js": ["ContentScript.js"]
+		}
+	],
+	"web_accessible_resources": [{
+		"resources": ["HackCode.js"],
+		"matches": ["<all_urls>"]
+}]
+}
